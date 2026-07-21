@@ -1,0 +1,25 @@
+{
+    "a": {
+        "b": [
+            {
+                "data": "21-07-26",
+                "series": [
+                    {
+                        "serie": 1,
+                        "carga": 3.0,
+                        "reps": 3,
+                        "rpe": "Dificil",
+                        "obs": "Falha"
+                    },
+                    {
+                        "serie": 2,
+                        "carga": 2.0,
+                        "reps": 2,
+                        "rpe": "Moderado/Pesado",
+                        "obs": "Normal"
+                    }
+                ]
+            }
+        ]
+    }
+}

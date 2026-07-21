@@ -39,11 +39,12 @@ def adicionar_treino(treinos_adicionados,exercicios_adicionados): # Adicionar a 
             )
 
         print(f"\n[✔] Treino de '{nome_exercicio_adicionado}' adicionado com sucesso!")
-        pergunta = str(input(f"Deseja adicionar mais um exercício do treino de '{tipo_treino}'? (S/N): "))
-        if pergunta.strip().upper() == "N":
-            break
-
-    return treinos_adicionados, exercicios_adicionados
+        while True:
+            pergunta = str(input(f"Deseja adicionar mais um exercício do treino de '{tipo_treino}'? (S/N): "))
+            if pergunta.strip().upper() == "N":
+                return treinos_adicionados, exercicios_adicionados
+            else:
+                break
 
 def alterar_treino(treinos_adicionados,exercicios_adicionados):
     print("\n=== [ Alterar Treino ] ===")
@@ -159,7 +160,7 @@ def listar_treino_especifico(treinos_adicionados, tipos_treino, nome_exercicio):
                 print(f" '{key}' -> '{value}' ", end=" ")
             print()
 
-def listar_treino_completo(treinos_adicionados,exercicios_adicionados):
+def listar_treino_completo(treinos_adicionados):
     print("\n=== [ Todos os Treinos Registrados ] ===")
     for tipo_treino in treinos_adicionados:
         for nome_exercicio in treinos_adicionados[tipo_treino]:
